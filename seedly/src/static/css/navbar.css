@@ -1,0 +1,49 @@
+/* Navbar CSS */
+.topnav {
+  overflow: hidden;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.topnav .navigation{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.navigation img{
+  width: 65px;
+  margin-right: 20px;
+}
+
+/* Change the color of links on hover */
+
+.topnav .input{
+  float: right;
+  padding: 6px;
+  border: none;
+  font-size: 17px;
+}
+
+/* Style the search box inside the navigation bar */
+.topnav input {
+  padding: 6px;
+  margin-right: 9px;
+}
+
+.input button{
+  background-color: white;
+  color: #286fdc;
+  border: 2px solid #286fdc;
+  width: 81px;
+  height: 41px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+  border-radius: 18px;
+  outline: none;
+}
