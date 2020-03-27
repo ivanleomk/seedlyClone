@@ -7,7 +7,7 @@ const UserNavBar = () => {
   return (
           <div style = {{paddingLeft: "10%",paddingTop: "1%",paddingBottom:"1%",paddingRight: "10%"}} className="topnav">
               <div className = "navigation">
-                  <img src = {seedlyLogo} />
+                  <img src = {seedlyLogo} alt = "Logo"/>
                   <div>
                       <a href="#home">Home</a>
                       <a href="#about">About</a>

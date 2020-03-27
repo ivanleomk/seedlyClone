@@ -2,15 +2,19 @@ import React from 'react';
 
 import '../static/css/sidebar.css'
 
+import TagList from './tagList';
+
 const Sidebar = () => {
-  let tags = ["Investments","COVID-19","Credit Card"]
+  const fake_tags = ["COVID-19", "COVID-19 Refunds", "FIRE Movement","MileLion","SG Budget Babe", 'Stocks Discussion', "Investments", "Insurance", "Property", "Credit Card", "Savings", "Lifestyle", "Family", "Retirement", "Career", "Loans", "Savings Account"," Payments", "Entrepreneurship"," Multi Currency Cards"]
+
+  const default_setting = ["All Questions"]
   return (
           <div className = "sidebarBody">
             <div>
-                All Questions
+                <TagList tags={default_setting} title = ""/>
             </div>
-            <div>
-                Other Questions
+            <div className = "combinedTags" style = {{paddingTop: "20px"}}>
+                <TagList tags={fake_tags} title = "Featured Topics"/>
             </div>
           </div>
       )};

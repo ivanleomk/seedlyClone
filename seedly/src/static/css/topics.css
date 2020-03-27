@@ -20,3 +20,7 @@
 .topicNavigation a:active{
     color: rgb(40, 111, 220);
 }
+
+.combinedTopics{
+    margin-top: 10px;
+}
