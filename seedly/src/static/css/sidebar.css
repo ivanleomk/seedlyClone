@@ -22,9 +22,8 @@
     margin: 20px 6px;
 }
 
-.sidebarBody li #active{
+.sidebarBody li .ctive{
     color: rgb(40, 111, 220);
-    background-color: rgb(244, 245, 246);
     font-weight: bold;
 }
 

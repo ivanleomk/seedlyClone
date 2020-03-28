@@ -55,7 +55,9 @@ class TopicList extends React.Component{
 
     componentDidMount(){
         //Add an Axios API call here
-
+        let element = document.getElementById("Recent")
+        element.classList.add("active")
+        this.props.selectRecent()
     }
 
     render(){

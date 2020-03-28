@@ -21,6 +21,12 @@ class TagList extends React.Component{
 
     }
 
+    componentDidMount() {
+        let element = document.getElementById("All Questions").querySelector("a")
+        element.setAttribute("class","active")
+    }
+
+
     updateAboutInformation(e){
         this.clearElements()
         let element = document.getElementById(e.target.text).querySelector("a")
