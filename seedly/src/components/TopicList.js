@@ -2,8 +2,9 @@ import React from 'react';
 
 import '../static/css/topics.css'
 
+//Importing Components
 import CombinedTopics from './CombinedTopics';
-
+import About from './About';
 
 //Importing Reducers
 import {connect} from "react-redux";
@@ -66,6 +67,7 @@ class TopicList extends React.Component{
                   <a className = "navigationButtons" id = "Uns" onClick = {this.findUnanswered} href = "#" > Unanswered </a>
              </div>
               <div className = "combinedTopics">
+                  <About />
                 <CombinedTopics />
               </div>
           </div>

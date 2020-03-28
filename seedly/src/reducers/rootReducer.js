@@ -41,8 +41,16 @@ var selectedpostReducer = (state={}, action) => {
         return new_state;
 
       case 'TAG_POST':
-        new_state = state.map(e => {
-                              if (e.tags.includes(action.payload.e)) {
+        if (action.payload == "ALL"){
+            new_state = state.map(e => {
+                              if (e.include_in_list === false) {
+                                e = { ...e, include_in_list:true };
+                              }
+                              return e;
+                            })
+        }else{
+            new_state = state.map(e => {
+                              if (e.tags.includes(action.payload)) {
                                 e = { ...e, include_in_list:true };
 
                               }else{
@@ -50,6 +58,7 @@ var selectedpostReducer = (state={}, action) => {
                               }
                               return e;
                             })
+        }
         return new_state;
 
      default:
@@ -58,6 +67,16 @@ var selectedpostReducer = (state={}, action) => {
 };
 
 
+var aboutReducer  = (state = {},action) => {
+    switch(action.type){
+        case "UPDATE_ABOUT":
+            return action.payload
+        default:
+            return state;
+    }
+}
+
 export default combineReducers({
-    selected_posts: selectedpostReducer
+    selected_posts: selectedpostReducer,
+    about: aboutReducer
 });

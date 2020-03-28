@@ -27,3 +27,10 @@ export const selectTrending = () =>{
     type: 'TRENDING_POST'
   }
 }
+
+export const updateAbout = new_description => {
+  return{
+    type: 'UPDATE_ABOUT',
+    payload: new_description
+  }
+}

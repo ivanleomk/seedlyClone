@@ -68,6 +68,14 @@ a.active {
     margin-left: 5%
 }
 
+li .active{
+    color: rgb(40, 111, 220);
+}
+a:active{
+    color: rgb(40, 111, 220);
+}
+
+
 .questionButton{
     text-align: center;
     background-color: white;

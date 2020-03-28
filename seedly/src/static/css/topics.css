@@ -17,10 +17,9 @@
     width: 150px;
 }
 
-.topicNavigation a:active{
-    color: rgb(40, 111, 220);
+.sidebarBody li .active{
+    background-color: rgb(154, 161, 179);
 }
-
 .combinedTopics{
     margin-top: 10px;
 }

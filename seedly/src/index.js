@@ -88,7 +88,8 @@ let initial_posts = [
     ]
 
 const initialState = {
-    selected_posts: initial_posts
+    selected_posts: initial_posts,
+    about: ""
 };
 
 ReactDOM.render(

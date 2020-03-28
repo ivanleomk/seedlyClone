@@ -22,6 +22,16 @@
     margin: 20px 6px;
 }
 
+.sidebarBody li #active{
+    color: rgb(40, 111, 220);
+    background-color: rgb(244, 245, 246);
+    font-weight: bold;
+}
+
+.sidebarBody a:hover{
+    color: rgb(0, 111, 220);
+}
+
 .sidebarBody a{
     width: 200px;
     padding-left: 10px;
