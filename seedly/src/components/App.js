@@ -1,7 +1,5 @@
 //Library Imports
 import React from 'react';
-import { connect } from 'react-redux';
-
 //Action Imports
 
 
@@ -18,7 +16,7 @@ class App extends React.Component {
     render(){
         return (
             <div>
-                <button >Testing</button>
+                
                 <UserNavBar />
                 <DesktopImage />
                 <div className = "bodyTopics">

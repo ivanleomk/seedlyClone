@@ -5,7 +5,9 @@ import {FaThumbsUp} from 'react-icons/fa';
 import {IoMdShare} from 'react-icons/io';
 
 let calcuateDifference = (timestamp,currentTime) => {
-    let difference = (currentTime - timestamp)/1000
+    timestamp = parseInt(timestamp)
+    currentTime = currentTime/1000
+    let difference = (currentTime - timestamp)
     //Less than 24 hours --> in hours
     if (difference <= 3600){
         return `Last updated ${Math.floor(difference/60).toString()} minutes ago`
@@ -62,7 +64,7 @@ const Topic = (props) => {
                       </div>
                   </div>
               </div>
-              <p style = {{marginTop: "20px"}}>Please share my referal code!!</p>
+              <p style = {{marginTop: "20px"}}>{props.posts.description}</p>
               <div style = {{display: "flex",flexDirection:"row",justifyContent:"space-between"}}>
                   <div style = {{display: "flex",flexDirection:"row",alignItems:"center"}}>
                      <Box as={MdChatBubbleOutline} size="32px" color="black.200" />
