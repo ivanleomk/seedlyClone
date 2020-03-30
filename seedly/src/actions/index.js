@@ -1,4 +1,10 @@
-import axios from "axios";
+import getPosts from "../axios/getPosts";
+
+export const setUp = () =>
+    async (dispatch)  => {
+        const response = await getPosts.get('/posts');
+        dispatch({type: 'SET_UP', payload: response})
+    };
 
 export const selectTag = tag => {
   // Return an action

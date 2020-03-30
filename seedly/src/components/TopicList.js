@@ -8,7 +8,7 @@ import About from './About';
 
 //Importing Reducers
 import {connect} from "react-redux";
-import {selectUnanswered, selectRecent, selectTrending} from "../actions";
+import {selectUnanswered, selectRecent, selectTrending,setUp} from "../actions";
 
 
 class TopicList extends React.Component{
@@ -55,6 +55,8 @@ class TopicList extends React.Component{
 
     componentDidMount(){
         //Add an Axios API call here
+        this.props.setUp()
+        //We then configure Recent by deafult
         let element = document.getElementById("Recent")
         element.classList.add("active")
         this.props.selectRecent()
@@ -68,7 +70,7 @@ class TopicList extends React.Component{
                   <a className = "navigationButtons" id = "Trending" onClick = {this.findTrending}   href = "#" > Trending </a>
                   <a className = "navigationButtons" id = "Uns" onClick = {this.findUnanswered} href = "#" > Unanswered </a>
              </div>
-              <div className = "combinedTopics">
+              <div className = "combinedTopics" >
                   <About />
                 <CombinedTopics />
               </div>
@@ -81,4 +83,4 @@ const mapStateToProps = (state) => {
     return {selected_posts: state.selected_posts}
 }
 
-export default connect(mapStateToProps,{selectRecent,selectUnanswered, selectTrending})(TopicList);
+export default connect(mapStateToProps,{selectRecent,selectUnanswered, selectTrending,setUp})(TopicList);

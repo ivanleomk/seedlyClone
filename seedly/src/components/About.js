@@ -13,7 +13,6 @@ const About = (props) => {
                                   flexDirection:"column",
                                   marginTop: "20px",
                                   marginBottom: "20px",
-                                  marginLeft: "20px",
                                   padding:"20px",
                                   backgroundColor: "White"}}>
 

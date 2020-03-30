@@ -1,11 +1,10 @@
 import { combineReducers } from 'redux';
 
-var selectedpostReducer = (state={}, action) => {
+var selectedpostReducer = (state=[], action) => {
   let new_state;
   switch (action.type) {
-      case 'INITIAL_SETUP':
-
-       return 0;
+      case 'SET_UP':
+       return action.payload.data;
 
       case 'RECENT_POST':
       new_state = state.map(e => {
@@ -41,7 +40,7 @@ var selectedpostReducer = (state={}, action) => {
         return new_state;
 
       case 'TAG_POST':
-        if (action.payload == "ALL"){
+        if (action.payload === "ALL"){
             new_state = state.map(e => {
                               if (e.include_in_list === false) {
                                 e = { ...e, include_in_list:true };
@@ -67,7 +66,7 @@ var selectedpostReducer = (state={}, action) => {
 };
 
 
-var aboutReducer  = (state = {},action) => {
+var aboutReducer  = (state = "",action) => {
     switch(action.type){
         case "UPDATE_ABOUT":
             return action.payload

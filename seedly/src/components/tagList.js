@@ -12,7 +12,7 @@ class TagList extends React.Component{
     }
 
     clearElements(){
-        let elements = document.querySelectorAll('a')
+        let elements = document.getElementsByClassName("tagNavigation")
         for (var i = 0; i < elements.length; i++) {
             if(elements[i].classList.contains("active")){
                 elements[i].classList.remove("active")
@@ -23,16 +23,16 @@ class TagList extends React.Component{
 
     componentDidMount() {
         let element = document.getElementById("All Questions").querySelector("a")
-        element.setAttribute("class","active")
+        element.classList.add("active")
     }
 
 
     updateAboutInformation(e){
         this.clearElements()
         let element = document.getElementById(e.target.text).querySelector("a")
-        element.setAttribute("class","active")
+        element.classList.add("active")
 
-        if (e.target.text == "All Questions"){
+        if (e.target.text === "All Questions"){
            this.props.updateAbout("")
            this.props.selectTag("ALL")
         }
@@ -48,10 +48,11 @@ class TagList extends React.Component{
 
         let TagItems = this.props.tags.map((e)=>
             <li
+
               onClick={this.updateAboutInformation}
               style = {{margintop: "20px",width:"200px"}}
               id = {e}>
-             <a href="#asd">{e}</a></li>)
+             <a className = "tagNavigation" href="#asd">{e}</a></li>)
 
         return (
           <div>
